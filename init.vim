@@ -1,27 +1,27 @@
-		set nu " 当文件被其他编辑器修改时，自动加载 
-	set autowrite
-	set autoread ""设置按照syntax高亮进行折叠 
-	set relativenumber 
-	set foldmethod=syntax 
-	set nofoldenable 
-	set modifiable 
-	set tabstop=4 
-	set softtabstop=4
-	set shiftwidth=4 
-	set noexpandtab 
-	set cursorline 
-	set so=10 
-	syntax on
-	hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+set nu " 当文件被其他编辑器修改时，自动加载 
+set autowrite
+set autoread ""设置按照syntax高亮进行折叠 
+set relativenumber 
+set foldmethod=syntax 
+set nofoldenable 
+set modifiable 
+set tabstop=4 
+set softtabstop=4
+set shiftwidth=4 
+set noexpandtab 
+set cursorline 
+set so=10 
+syntax on
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 
 
-	"highlight Normal ctermfg=black ctermbg=yellow--------------------fzf 搜索---------------------
-	"
-	" 重新映射 leader 键
-	let g:mapleader = '\'
-	nnoremap  <Leader>ff :Files<CR>
-	nnoremap  <Leader>e :Buffers<CR>
-	nnoremap <Leader>ss :Ag <CR>
+"highlight Normal ctermfg=black ctermbg=yellow--------------------fzf 搜索---------------------
+"
+" 重新映射 leader 键
+let g:mapleader = '\'
+nnoremap  <Leader>ff :Files<CR>
+nnoremap  <Leader>e :Buffers<CR>
+nnoremap <Leader>ss :Ag <CR>
 
 nnoremap <Leader>cc :Commands <CR>
 nnoremap <Leader>hh :History <CR>
@@ -105,9 +105,11 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ferrine/md-img-paste.vim'
+Plug 'kristijanhusak/defx-icons'
 call plug#end()
 
 
+"let g:defx_icons_enable_syntax_highlight = 1
 " onedark.vim override: Don't set a background color when running in a terminal;
 if (has("autocmd") && !has("gui_running"))
   augroup colorset
@@ -184,24 +186,24 @@ let g:airline_section_z = airline#section#create(['%{strftime("%H:%M")}'])
 "激活tagbar扩展
 let g:airline#extensions#tagbar#enabled = 1
 
-  call defx#custom#option('_', {
-            \ 'winwidth': 30,
-            \ 'split': 'vertical',
-            \ 'direction': 'topleft',
-            \ 'show_ignored_files': 0,
-            \ 'buffer_name': '',
-            \ 'toggle': 1,
-            \ 'resume': 1
-            \ })
-  "call defx#custom#option('_', {
-"  \ 'columns': 'icons:indent:filename:size',
-"  \ 'winwidth': 30,
-"  \ 'split': 'vertical',
-"  \ 'direction': 'botright',
-"  \ 'show_ignored_files': 0,
-"  \ 'resume': 1,
-"  \ })
-"
+"  call defx#custom#option('_', {
+"            \ 'winwidth': 30,
+"            \ 'split': 'vertical',
+"            \ 'direction': 'topleft',
+"            \ 'show_ignored_files': 0,
+"            \ 'buffer_name': '',
+"            \ 'toggle': 1,
+"            \ 'resume': 1
+"            \ })
+call defx#custom#option('_', {
+  \ 'columns': 'icons:indent:filename:size',
+  \ 'winwidth': 30,
+  \ 'split': 'vertical',
+  \ 'direction': 'botright',
+  \ 'show_ignored_files': 0,
+  \ 'resume': 1,
+  \ })
+
 
 function! s:isAtStartOfLine(mapping)
   let text_before_cursor = getline('.')[0 : col('.')-1]
