@@ -7,4 +7,5 @@ then
 	ln -s "$GIT_ROOT/myconfig/.zshrc.conf" "$HOME"
 	ln -s "$GIT_ROOT/myconfig/init.vim" "$HOME/.config/nvim/"
 	ln -s "$GIT_ROOT/myconfig/.ideavimrc" "$HOME"
+	ln -s "$GIT_ROOT/myconfig/alacritty.yml" "$HOME/.config/alacritty/"
 fi
