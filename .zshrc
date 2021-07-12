@@ -59,6 +59,9 @@ export ZSH="/Users/lidi/.oh-my-zsh"
 #ZSH_THEME="agnoster"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=##5C6370'
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#E5C07B'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999797'
 #ZSH_THEME='random'
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 #POWERLEVEL9K_MODE="nerdfont-complete"
@@ -244,7 +247,7 @@ alias unproxy='unset http_proxy;unset https_proxy;'
 #export GOPROXY='https://127.0.0.1:1087'
 alias sed='gsed'
 alias reboot='~/bin/reboot.sh'
-#alias vim="nvim"
+alias vim="/opt/nvim-osx64/bin/nvim"
 alias pip3='/usr/bin/pip3'
 #alias proxy='proxychains4'
 # ----------------------------------------------tmux -----------------------------------------------
@@ -273,7 +276,6 @@ aria_conf='/Users/lidi/.aria2/aria2.conf'
 alias aria2rpc='aria2c --conf-path=${aria_conf} -D'
 #alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 #alias unproxy='unset all_proxy'
-#alias vim='/Users/lidi/git/nvim-osx64/bin/nvim'
 alias pip='/usr/local/bin/pip3.9'
 alias ctags='/usr/local/bin/ctags'
 
@@ -291,7 +293,13 @@ export VISUAL=/usr/local/bin/vim
 # xplr works best with aliases
 alias x="xplr"
 alias sys_ls='ls'
-alias ls='exa'
+
+#alias ls='exa'
+alias ls='lsd'
+
+alias la='ls -a'
+alias ll='ls -la'
+alias lt='ls --tree'
 alias sync='~/bin/sync.sh'
 # Change directory
 alias xcd='cd "$(xplr)"'
