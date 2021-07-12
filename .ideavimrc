@@ -1,0 +1,68 @@
+
+let mapleade='\'
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmode
+set number
+set relativenumber
+set scrolloff=3
+set history=100000
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+inoremap jj <Esc>`^
+
+
+nnoremap <Leader>fa :action SearchEverywhere<CR>
+
+
+"打断点
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+
+
+"查看所有断点
+nnoremap <Leader>ba :action ViewBreakpoints<CR>
+
+
+nnoremap <Leader>rcd :action ChooseDebugConfiguration<CR>
+nnoremap <Leader>rd :action Debug<CR>
+"正常启动工程
+nnoremap <Leader>rr :action Run<CR>
+nnoremap <Leader>rcr :action ChooseRunConfiguration<CR>
+" 重启
+nnoremap <Leader>rs :action Rerun<CR>
+" 最近打開文件
+nnoremap <Leader>rf :action RecentFiles<CR>
+nnoremap <Leader>e :action RecentFiles<CR>
+nnoremap <Leader>rc :action RecentChanges<CR>
+
+
+"跳转到文件
+nnoremap <Leader>ff :action GotoFile<CR>
+
+"跳转到实现类
+nnoremap <Leader>gi :action GotoImplementation<CR>
+
+"打开命令管理器
+nnoremap <Leader>tt :action ActivateTerminalToolWindow<CR>
+"vnoremap <Leader>tt :action ActivateTerminalToolWindow<CR>
+
+nnoremap <Leader>tr :action ActivateRunToolWindow<CR>
+nnoremap <Leader>ts :action ActivateStructureToolWindow<CR>
+nnoremap <Leader>d :action ActivateProjectToolWindow<CR>
+nnoremap <Leader>ttd :action ActivateTODOToolWindow<CR>
+map <silent> <C-\> :action ActivateProjectToolWindow<CR>
+ 
+"nnoremap <C-\> :action ActivateProjectToolWindow<CR>
+"添加注释
+nnoremap <Leader>;; :action CommentByLineComment<CR>
+
+" 全局替换
+nnoremap <Leader>sr :action ReplaceInPath<CR>
+
+" 全局查找
+nnoremap <Leader>ss :action FindInPath<CR>
+" 
+nnoremap <Leader>/ :action Find<CR>
