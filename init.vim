@@ -16,6 +16,8 @@ syntax on
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 
 
+
+
 "highlight Normal ctermfg=black ctermbg=yellow--------------------fzf 搜索---------------------
 "
 "
@@ -99,6 +101,7 @@ nnoremap <Leader>hh :History <CR>
 nnoremap <silent><leader>d :Defx<CR>
 "inoremap jj <Esc>`^
 inoremap jj <Esc>`^
+inoremap wj <Esc>`^ :w <CR>
 nnoremap <silent><leader>w <Esc>:w<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
 nnoremap <Leader>rr:call QuickRun()
@@ -167,6 +170,8 @@ noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
 noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 noremap <leader>fn :<C-U><C-R>=printf("Leaderf function %s", "")<CR><CR>
 noremap <leader>fan :LeaderfFunctionAll<CR>
+nnoremap <Leader>fch :LeaderfHistoryCmd <CR>
+nnoremap <Leader>fc :LeaderfCommand <CR>
 
 noremap <leader>e :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 noremap <leader>fr :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
