@@ -13,6 +13,7 @@ set history=100000
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 inoremap jj <Esc>`^
+inoremap jj <Esc>`^ :w <CR>
 
 
 nnoremap <Leader>fa :action SearchEverywhere<CR>
