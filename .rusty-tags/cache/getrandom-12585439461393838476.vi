@@ -1,0 +1,140 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BCRYPT_USE_SYSTEM_PREFERRED_RNG	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/windows_uwp.rs	/^const BCRYPT_USE_SYSTEM_PREFERRED_RNG: u32 = 0x00000002;$/;"	c
+BCryptGenRandom	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/windows_uwp.rs	/^    fn BCryptGenRandom($/;"	f
+BrowserCrypto	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    type BrowserCrypto;$/;"	T
+CHUNK_SIZE	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^const CHUNK_SIZE: usize = 256;$/;"	c
+CUSTOM_START	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    pub const CUSTOM_START: u32 = (1 << 31) + (1 << 30);$/;"	c
+Drop for DropGuard	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^impl<F: FnMut()> Drop for DropGuard<F> {$/;"	i
+DropGuard	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^struct DropGuard<F: FnMut()>(F);$/;"	s
+Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^impl Error {$/;"	i
+Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^pub struct Error(NonZeroU32);$/;"	s
+FD	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^    static FD: AtomicUsize = AtomicUsize::new(LazyUsize::UNINIT);$/;"	c
+FILE_PATH	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^const FILE_PATH: &str = "\/dev\/random\\0";$/;"	c
+FILE_PATH	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^const FILE_PATH: &str = "\/dev\/urandom\\0";$/;"	c
+FILE_PATH	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^const FILE_PATH: &str = "rand:\\0";$/;"	c
+FLAG	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^    const FLAG: u32 = 1 << 30;$/;"	c
+From for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^impl From<NonZeroU32> for Error {$/;"	i
+From for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error_impls.rs	/^impl From<io::Error> for Error {$/;"	i
+From for io	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error_impls.rs	/^impl From<Error> for io::Error {$/;"	i
+GETENTROPY	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/macos.rs	/^    static GETENTROPY: Weak = unsafe { Weak::new("getentropy\\0") };$/;"	c
+GETRANDOM	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/bsd_arandom.rs	/^        static GETRANDOM: Weak = unsafe { Weak::new("getrandom\\0") };$/;"	c
+GETRANDOM	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/solaris_illumos.rs	/^    static GETRANDOM: Weak = unsafe { Weak::new("getrandom\\0") };$/;"	c
+GetEntropyFn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/macos.rs	/^type GetEntropyFn = unsafe extern "C" fn(*mut u8, libc::size_t) -> libc::c_int;$/;"	T
+GetRandomFn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/bsd_arandom.rs	/^        type GetRandomFn =$/;"	T
+GetRandomFn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/solaris_illumos.rs	/^type GetRandomFn = unsafe extern "C" fn(*mut u8, libc::size_t, libc::c_uint) -> libc::c_int;$/;"	T
+GetRandomFn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/solaris_illumos.rs	/^type GetRandomFn = unsafe extern "C" fn(*mut u8, libc::size_t, libc::c_uint) -> libc::ssize_t;$/;"	T
+Global	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    type Global;$/;"	T
+HAS_GETRANDOM	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/linux_android.rs	/^    static HAS_GETRANDOM: LazyBool = LazyBool::new();$/;"	c
+HAS_RDRAND	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^    static HAS_RDRAND: LazyBool = LazyBool::new();$/;"	c
+INTERNAL_START	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    pub const INTERNAL_START: u32 = 1 << 31;$/;"	c
+LazyBool	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^impl LazyBool {$/;"	i
+LazyBool	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^pub struct LazyBool(LazyUsize);$/;"	s
+LazyUsize	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^impl LazyUsize {$/;"	i
+LazyUsize	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^pub struct LazyUsize(AtomicUsize);$/;"	s
+MIB	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/bsd_arandom.rs	/^    static MIB: [libc::c_int; 2] = [libc::CTL_KERN, libc::KERN_ARND];$/;"	c
+MODULE	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    static MODULE: NodeModule;$/;"	c
+MUTEX	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^    static MUTEX: Mutex = Mutex::new();$/;"	c
+Mutex	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^impl Mutex {$/;"	i
+Mutex	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^struct Mutex(UnsafeCell<libc::pthread_mutex_t>);$/;"	s
+NodeCrypto	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    type NodeCrypto;$/;"	T
+NodeModule	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    type NodeModule;$/;"	T
+ONCE	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_stdweb.rs	/^    static ONCE: Once = Once::new();$/;"	c
+RETRY_LIMIT	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^const RETRY_LIMIT: usize = 10;$/;"	c
+RNG_INIT	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/vxworks.rs	/^    static RNG_INIT: AtomicBool = AtomicBool::new(false);$/;"	c
+RNG_SOURCE	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    static RNG_SOURCE: RefCell<Option<RngSource>> = RefCell::new(None);$/;"	c
+RngSource	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^enum RngSource {$/;"	g
+RngSource	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_stdweb.rs	/^enum RngSource {$/;"	g
+RtlGenRandom	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/windows.rs	/^    fn RtlGenRandom(RandomBuffer: *mut u8, RandomBufferLength: u32) -> u8;$/;"	f
+SecRandom	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/ios.rs	/^struct SecRandom([u8; 0]);$/;"	s
+SecRandomCopyBytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/ios.rs	/^    fn SecRandomCopyBytes(rnd: *const SecRandom, count: usize, bytes: *mut u8) -> i32;$/;"	f
+Self_	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    type Self_;$/;"	T
+UNAVAILABLE	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    pub const UNAVAILABLE: Error = UNSUPPORTED;$/;"	c
+UNINIT	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^    pub const UNINIT: usize = usize::max_value();$/;"	c
+UNKNOWN	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    pub const UNKNOWN: Error = UNSUPPORTED;$/;"	c
+WORD_SIZE	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^const WORD_SIZE: usize = mem::size_of::<u64>();$/;"	c
+Weak	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^impl Weak {$/;"	i
+Weak	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^pub struct Weak {$/;"	s
+cloudabi_sys_random_get	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/cloudabi.rs	/^    fn cloudabi_sys_random_get(buf: *mut u8, buf_len: usize) -> u16;$/;"	f
+code	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    pub fn code(self) -> NonZeroU32 {$/;"	f
+crypto	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    fn crypto(me: &Self_) -> JsValue;$/;"	f
+drop	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^    fn drop(&mut self) {$/;"	f
+error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^        macro_rules! error {$/;"	d
+error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^mod error;$/;"	m
+error_impls	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^mod error_impls;$/;"	m
+fmt	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {$/;"	f
+fmt::Debug for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^impl fmt::Debug for Error {$/;"	i
+fmt::Display for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^impl fmt::Display for Error {$/;"	i
+fn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^    const fn new() -> Self {$/;"	c
+fn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^    pub const fn new() -> Self {$/;"	c
+from	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    fn from(code: NonZeroU32) -> Self {$/;"	f
+from	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error_impls.rs	/^    fn from(err: Error) -> Self {$/;"	f
+from	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error_impls.rs	/^    fn from(err: io::Error) -> Self {$/;"	f
+get_errno	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^        unsafe fn get_errno() -> libc::c_int { *errno_location() }$/;"	f
+get_errno	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^        unsafe fn get_errno() -> libc::c_int { -1 }$/;"	f
+get_fd	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^    fn get_fd() -> Option<libc::c_int> {$/;"	f
+get_random_values	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    fn get_random_values(me: &BrowserCrypto, buf: &Uint8Array);$/;"	f
+get_random_values_fn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    fn get_random_values_fn(me: &BrowserCrypto) -> JsValue;$/;"	f
+get_rng_fd	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^fn get_rng_fd() -> Result<libc::c_int, Error> {$/;"	f
+get_self	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    fn get_self() -> Result<Self_, JsValue>;$/;"	f
+getrandom	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^pub fn getrandom(dest: &mut [u8]) -> Result<(), error::Error> {$/;"	f
+getrandom	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/linux_android.rs	/^unsafe fn getrandom($/;"	f
+getrandom_fill	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_stdweb.rs	/^fn getrandom_fill(source: RngSource, dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_init	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^fn getrandom_init() -> Result<RngSource, Error> {$/;"	f
+getrandom_init	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_stdweb.rs	/^fn getrandom_init() -> Result<RngSource, Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/bsd_arandom.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/cloudabi.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/dummy.rs	/^pub fn getrandom_inner(_: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/fuchsia.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/ios.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/linux_android.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/macos.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/openbsd.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/solaris_illumos.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/vxworks.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasi.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_stdweb.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/windows.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+getrandom_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/windows_uwp.rs	/^pub fn getrandom_inner(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+info	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^        macro_rules! info {$/;"	d
+internal_desc	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^fn internal_desc(error: Error) -> Option<&'static str> {$/;"	f
+internal_error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^macro_rules! internal_error {$/;"	d
+is_getrandom_available	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/linux_android.rs	/^fn is_getrandom_available() -> bool {$/;"	f
+is_rdrand_supported	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^fn is_rdrand_supported() -> bool {$/;"	f
+kSecRandomDefault	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/ios.rs	/^    static kSecRandomDefault: *const SecRandom;$/;"	c
+kern_arnd	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/bsd_arandom.rs	/^fn kern_arnd(buf: &mut [u8]) -> libc::ssize_t {$/;"	f
+last_os_error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^pub fn last_os_error() -> Error {$/;"	f
+lock	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^    unsafe fn lock(&self) {$/;"	f
+ms_crypto	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    fn ms_crypto(me: &Self_) -> JsValue;$/;"	f
+mut	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_stdweb.rs	/^    static mut RNG_SOURCE: Result<RngSource, Error> = Ok(RngSource::Node);$/;"	c
+open_readonly	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^pub unsafe fn open_readonly(path: &str) -> Result<libc::c_int, Error> {$/;"	f
+os_err	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^        fn os_err(_errno: i32, _buf: &mut [u8]) -> Option<&str> {$/;"	f
+os_err	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^        fn os_err(errno: i32, _buf: &mut [u8]) -> Option<wasi::Error> {$/;"	f
+os_err	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^        fn os_err(errno: i32, buf: &mut [u8]) -> Option<&str> {$/;"	f
+ptr	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^    pub fn ptr(&self) -> Option<NonNull<libc::c_void>> {$/;"	f
+random_fill_sync	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    fn random_fill_sync(me: &NodeCrypto, buf: &mut [u8]);$/;"	f
+raw_os_error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    pub fn raw_os_error(self) -> Option<i32> {$/;"	f
+rdrand	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^unsafe fn rdrand() -> Result<[u8; WORD_SIZE], Error> {$/;"	f
+rdrand_exact	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/rdrand.rs	/^unsafe fn rdrand_exact(dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+require	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/wasm32_bindgen.rs	/^    fn require(this: &NodeModule, s: &str) -> NodeCrypto;$/;"	f
+std::error::Error for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error_impls.rs	/^impl std::error::Error for Error {}$/;"	i
+sys_fill_exact	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^pub fn sys_fill_exact($/;"	f
+test_size	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^    fn test_size() {$/;"	f
+tests	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/error.rs	/^mod tests {$/;"	m
+unlock	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^    unsafe fn unlock(&self) {$/;"	f
+unsafe	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util_libc.rs	/^    pub const unsafe fn new(name: &'static str) -> Self {$/;"	c
+unsync_init	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^    pub fn unsync_init(&self, init: impl FnOnce() -> bool) -> bool {$/;"	f
+unsync_init	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/util.rs	/^    pub fn unsync_init(&self, init: impl FnOnce() -> usize) -> usize {$/;"	f
+use_file	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^        mod use_file;$/;"	m
+util	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^mod util;$/;"	m
+util_libc	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^        mod util_libc;$/;"	m
+wait_until_rng_ready	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/use_file.rs	/^fn wait_until_rng_ready() -> Result<(), Error> {$/;"	f
+warn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/lib.rs	/^        macro_rules! warn {$/;"	d
+zx_cprng_draw	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/getrandom-0.1.16/src/fuchsia.rs	/^    fn zx_cprng_draw(buffer: *mut u8, length: usize);$/;"	f

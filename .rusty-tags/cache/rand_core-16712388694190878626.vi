@@ -1,0 +1,113 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BlockRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^impl<R: BlockRngCore> BlockRng<R> {$/;"	i
+BlockRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^pub struct BlockRng<R: BlockRngCore + ?Sized> {$/;"	s
+BlockRng64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^impl<R: BlockRngCore> BlockRng64<R> {$/;"	i
+BlockRng64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^pub struct BlockRng64<R: BlockRngCore + ?Sized> {$/;"	s
+BlockRngCore	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^pub trait BlockRngCore {$/;"	t
+CUSTOM_START	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    pub const CUSTOM_START: u32 = (1 << 31) + (1 << 30);$/;"	c
+CryptoRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^impl<'a, R: CryptoRng + ?Sized> CryptoRng for &'a mut R {}$/;"	i
+CryptoRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^pub trait CryptoRng {}$/;"	t
+CryptoRng for BlockRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^impl<R: BlockRngCore + CryptoRng> CryptoRng for BlockRng<R> {}$/;"	i
+CryptoRng for Box	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^impl<R: CryptoRng + ?Sized> CryptoRng for Box<R> {}$/;"	i
+CryptoRng for OsRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^impl CryptoRng for OsRng {}$/;"	i
+Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl Error {$/;"	i
+Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^pub struct Error {$/;"	s
+ErrorCode	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^struct ErrorCode(NonZeroU32);$/;"	s
+From for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl From<NonZeroU32> for Error {$/;"	i
+From for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl From<getrandom::Error> for Error {$/;"	i
+From for std	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl From<Error> for std::io::Error {$/;"	i
+INC	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^        const INC: u64 = 11634580027462260723;$/;"	c
+INTERNAL_START	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    pub const INTERNAL_START: u32 = 1 << 31;$/;"	c
+Item	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    type Item;$/;"	T
+MUL	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^        const MUL: u64 = 6364136223846793005;$/;"	c
+N	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^        const N: usize = 8;$/;"	c
+OsRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^pub struct OsRng;$/;"	s
+Results	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    type Results: AsRef<[Self::Item]> + AsMut<[Self::Item]> + Default;$/;"	T
+RngCore	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^impl<'a, R: RngCore + ?Sized> RngCore for &'a mut R {$/;"	i
+RngCore	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^pub trait RngCore {$/;"	t
+RngCore for Box	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^impl<R: RngCore + ?Sized> RngCore for Box<R> {$/;"	i
+RngCore for OsRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^impl RngCore for OsRng {$/;"	i
+SEEDS	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^        const SEEDS: [u64; N] = [0u64, 1, 2, 3, 4, 8, 16, -1i64 as u64];$/;"	c
+Seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    type Seed = R::Seed;$/;"	T
+Seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^            type Seed = [u8; 8];$/;"	T
+Seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    type Seed: Sized + Default + AsMut<[u8]>;$/;"	T
+SeedableNum	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^        struct SeedableNum(u64);$/;"	s
+SeedableRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^pub trait SeedableRng: Sized {$/;"	t
+SeedableRng for BlockRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^impl<R: BlockRngCore + SeedableRng> SeedableRng for BlockRng<R> {$/;"	i
+SeedableRng for BlockRng64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^impl<R: BlockRngCore + SeedableRng> SeedableRng for BlockRng64<R> {$/;"	i
+SeedableRng for SeedableNum	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^        impl SeedableRng for SeedableNum {$/;"	i
+block	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^pub mod block;$/;"	m
+code	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    pub fn code(&self) -> Option<NonZeroU32> {$/;"	f
+error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^mod error;$/;"	m
+fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn fill_bytes(&mut self, dest: &mut [u8]) {$/;"	f
+fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn fill_bytes(&mut self, dest: &mut [u8]) {$/;"	f
+fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn fill_bytes(&mut self, dest: &mut [u8]);$/;"	f
+fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^    fn fill_bytes(&mut self, dest: &mut [u8]) {$/;"	f
+fill_bytes_via_next	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^pub fn fill_bytes_via_next<R: RngCore + ?Sized>(rng: &mut R, dest: &mut [u8]) {$/;"	f
+fill_via_chunks	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^macro_rules! fill_via_chunks {$/;"	d
+fill_via_u32_chunks	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^pub fn fill_via_u32_chunks(src: &[u32], dest: &mut [u8]) -> (usize, usize) {$/;"	f
+fill_via_u64_chunks	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^pub fn fill_via_u64_chunks(src: &[u64], dest: &mut [u8]) -> (usize, usize) {$/;"	f
+fmt	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {$/;"	f
+fmt	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {$/;"	f
+fmt::Debug for BlockRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^impl<R: BlockRngCore + fmt::Debug> fmt::Debug for BlockRng<R> {$/;"	i
+fmt::Debug for BlockRng64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^impl<R: BlockRngCore + fmt::Debug> fmt::Debug for BlockRng64<R> {$/;"	i
+fmt::Debug for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl fmt::Debug for Error {$/;"	i
+fmt::Display for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl fmt::Display for Error {$/;"	i
+fmt::Display for ErrorCode	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl fmt::Display for ErrorCode {$/;"	i
+from	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    fn from(code: NonZeroU32) -> Self {$/;"	f
+from	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    fn from(error: Error) -> Self {$/;"	f
+from	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    fn from(error: getrandom::Error) -> Self {$/;"	f
+from_entropy	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn from_entropy() -> Self {$/;"	f
+from_rng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn from_rng<S: RngCore>(rng: S) -> Result<Self, Error> {$/;"	f
+from_rng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn from_rng<R: RngCore>(mut rng: R) -> Result<Self, Error> {$/;"	f
+from_seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn from_seed(seed: Self::Seed) -> Self {$/;"	f
+from_seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^            fn from_seed(seed: Self::Seed) -> Self {$/;"	f
+from_seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn from_seed(seed: Self::Seed) -> Self;$/;"	f
+generate	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn generate(&mut self, results: &mut Self::Results);$/;"	f
+generate_and_set	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    pub fn generate_and_set(&mut self, index: usize) {$/;"	f
+impl_uint_from_fill	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^macro_rules! impl_uint_from_fill {$/;"	d
+impls	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^pub mod impls;$/;"	m
+index	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    pub fn index(&self) -> usize {$/;"	f
+inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    pub fn inner(&self) -> &(dyn std::error::Error + Send + Sync + 'static) {$/;"	f
+le	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^pub mod le;$/;"	m
+new	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    pub fn new(core: R) -> BlockRng64<R>{$/;"	f
+new	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    pub fn new(core: R) -> BlockRng<R>{$/;"	f
+new	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    pub fn new<E>(err: E) -> Self$/;"	f
+next_u32	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn next_u32(&mut self) -> u32 {$/;"	f
+next_u32	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn next_u32(&mut self) -> u32 {$/;"	f
+next_u32	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn next_u32(&mut self) -> u32;$/;"	f
+next_u32	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^    fn next_u32(&mut self) -> u32 {$/;"	f
+next_u32_via_fill	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^pub fn next_u32_via_fill<R: RngCore + ?Sized>(rng: &mut R) -> u32 {$/;"	f
+next_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn next_u64(&mut self) -> u64 {$/;"	f
+next_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn next_u64(&mut self) -> u64 {$/;"	f
+next_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn next_u64(&mut self) -> u64;$/;"	f
+next_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^    fn next_u64(&mut self) -> u64 {$/;"	f
+next_u64_via_fill	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^pub fn next_u64_via_fill<R: RngCore + ?Sized>(rng: &mut R) -> u64 {$/;"	f
+next_u64_via_u32	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/impls.rs	/^pub fn next_u64_via_u32<R: RngCore + ?Sized>(rng: &mut R) -> u64 {$/;"	f
+raw_os_error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    pub fn raw_os_error(&self) -> Option<i32> {$/;"	f
+read	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn read(&mut self, buf: &mut [u8]) -> Result<usize, std::io::Error> {$/;"	f
+read_slice	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/le.rs	/^macro_rules! read_slice {$/;"	d
+read_u32_into	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/le.rs	/^pub fn read_u32_into(src: &[u8], dst: &mut [u32]) {$/;"	f
+read_u64_into	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/le.rs	/^pub fn read_u64_into(src: &[u8], dst: &mut [u64]) {$/;"	f
+reset	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    pub fn reset(&mut self) {$/;"	f
+seed_from_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn seed_from_u64(seed: u64) -> Self {$/;"	f
+seed_from_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn seed_from_u64(mut state: u64) -> Self {$/;"	f
+source	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {$/;"	f
+std::error::Error for Error	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl std::error::Error for Error {$/;"	i
+std::error::Error for ErrorCode	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^impl std::error::Error for ErrorCode {}$/;"	i
+std::io::Read for dyn	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^impl std::io::Read for dyn RngCore {$/;"	i
+take_inner	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/error.rs	/^    pub fn take_inner(self) -> Box<dyn std::error::Error + Send + Sync + 'static> {$/;"	f
+test	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^mod test {$/;"	m
+test_construction	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^fn test_construction() {$/;"	f
+test_os_rng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^fn test_os_rng() {$/;"	f
+test_read	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/le.rs	/^fn test_read() {$/;"	f
+test_seed_from_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn test_seed_from_u64() {$/;"	f
+try_fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/block.rs	/^    fn try_fill_bytes(&mut self, dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+try_fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn try_fill_bytes(&mut self, dest: &mut [u8]) -> Result<(), Error> {$/;"	f
+try_fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/lib.rs	/^    fn try_fill_bytes(&mut self, dest: &mut [u8]) -> Result<(), Error>;$/;"	f
+try_fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_core-0.5.1/src/os.rs	/^    fn try_fill_bytes(&mut self, dest: &mut [u8]) -> Result<(), Error> {$/;"	f

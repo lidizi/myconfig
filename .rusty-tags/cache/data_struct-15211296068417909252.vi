@@ -1,0 +1,38 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Collections	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^    pub trait Collections<T>{$/;"	t
+Collections for Node	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^    impl<T> Collections<T> for Node<T>{$/;"	i
+Node	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^    impl <T> Node<T>{$/;"	i
+Node	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^    struct Node<T>{$/;"	s
+Node	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^   impl<T> Node<T> {$/;"	i
+Node	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^   pub struct Node<T>{$/;"	s
+Stack	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^    impl <T> Stack<T> {$/;"	i
+Stack	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^    struct Stack<T>{$/;"	s
+add	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn add(&mut self, value :T){$/;"	f
+add	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn add(&mut self,value :T);$/;"	f
+delete	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn delete(&mut self, value :T) -> i32 {$/;"	f
+delete	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn delete(&mut self,value :T) -> i32;$/;"	f
+get	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn get(&self, value :T) -> T {$/;"	f
+get	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn get(&self,value :T) -> T;$/;"	f
+get_last	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^       pub fn get_last(&mut self) -> &mut Self{$/;"	f
+insert	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn insert(&mut self, index:u32, value :T) {$/;"	f
+insert	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn insert(&mut self,index:u32,value :T);$/;"	f
+linked	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^mod linked{$/;"	m
+main	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^    pub fn main(){$/;"	f
+main	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^fn main() {$/;"	f
+new	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn new() -> Self{$/;"	f
+new	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn new(value:T) -> Self{$/;"	f
+new	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^       pub fn new(value :T) -> Self{$/;"	f
+pop	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn pop(&mut self) -> Option<T>{$/;"	f
+pop	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^       pub fn pop(&mut self) -> Self{$/;"	f
+push	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn push(&mut self,value :T){$/;"	f
+set_next	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^       pub fn set_next(&mut self,node:Self){$/;"	f
+show	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn show(&self) {$/;"	f
+show	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn show(&self);$/;"	f
+stack	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^mod stack{$/;"	m
+update	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn update(&mut self, index:u32, value :T){$/;"	f
+update	/Users/lidi/work/rust/projects/data_struct/src/main.rs	/^        fn update(&mut self,index:u32,value :T);$/;"	f

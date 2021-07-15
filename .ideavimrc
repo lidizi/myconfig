@@ -10,11 +10,15 @@ set relativenumber
 set scrolloff=3
 set history=100000
 
+
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 inoremap jj <Esc>`^
-inoremap jj <Esc>`^ :w <CR>
+inoremap jw <Esc>`^ :w<CR>
 
+inoremap <leader>w <Esc>`^ :w <CR>
+nnoremap <silent><leader>w <Esc>:w<CR>
+vnoremap <silent><Leader>w <Esc>:write<CR>
 
 nnoremap <Leader>fa :action SearchEverywhere<CR>
 

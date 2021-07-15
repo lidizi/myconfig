@@ -163,11 +163,14 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottl
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+export RUST_BACKTRACE=1
 RUST_PATH="$HOME/.cargo/bin:$PATH"
 FIRE_FOX_PATH="/Applications/Firefox.app/Contents/MacOS"
 export PATH="/usr/local/opt/openssl@1.1/bin:$JAVA_HOME/bin:$RUST_PATH:$GRADLE_HOME/bin:$FIRE_FOX_PATH:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/library/
 #-----------------man ------------------------------
 #export BAT_THEME='Coldark-Dark'
 export BAT_THEME='OneDark'

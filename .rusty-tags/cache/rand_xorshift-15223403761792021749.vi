@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+RngCore for XorShiftRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^impl RngCore for XorShiftRng {$/;"	i
+Seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    type Seed = [u8; 16];$/;"	T
+SeedableRng for XorShiftRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^impl SeedableRng for XorShiftRng {$/;"	i
+XorShiftRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^pub struct XorShiftRng {$/;"	s
+fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    fn fill_bytes(&mut self, dest: &mut [u8]) {$/;"	f
+fmt	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {$/;"	f
+fmt::Debug for XorShiftRng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^impl fmt::Debug for XorShiftRng {$/;"	i
+from_rng	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    fn from_rng<R: RngCore>(mut rng: R) -> Result<Self, Error> {$/;"	f
+from_seed	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    fn from_seed(seed: Self::Seed) -> Self {$/;"	f
+next_u32	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    fn next_u32(&mut self) -> u32 {$/;"	f
+next_u64	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    fn next_u64(&mut self) -> u64 {$/;"	f
+try_fill_bytes	/Users/lidi/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/rand_xorshift-0.2.0/src/lib.rs	/^    fn try_fill_bytes(&mut self, dest: &mut [u8]) -> Result<(), Error> {$/;"	f
