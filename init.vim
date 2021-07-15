@@ -18,6 +18,8 @@ hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 
 
 
+
+
 "highlight Normal ctermfg=black ctermbg=yellow--------------------fzf 搜索---------------------
 "
 "
@@ -98,13 +100,14 @@ nnoremap <Leader>ss :RG <CR>
 
 nnoremap <Leader>cc :Commands <CR>
 nnoremap <Leader>hh :History <CR>
-nnoremap <silent><leader>d :Defx<CR>
+nnoremap <leader>d :Defx<CR>
 "inoremap jj <Esc>`^
-inoremap jj <Esc>`^
-inoremap wj <Esc>`^ :w <CR>
+inoremap <silent>jj <Esc>`^
+inoremap <silent>jw <Esc> :w <CR>
+inoremap <leader>w <Esc>`^ :w <CR>
 nnoremap <silent><leader>w <Esc>:w<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
-nnoremap <Leader>rr:call QuickRun()
+nnoremap <leader>rr :call QuickRun()<CR>
 
 "-------------------------------git ----------------------------------------
 
@@ -249,24 +252,6 @@ let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
-autocmd FileType ruby :call RUBLIB()
-autocmd FileType python :call PYTHONLIB()
-autocmd FileType defx call s:defx_my_settings() 
-function PYTHONLIB()
-	set tags=tags
-	set tags+=./tags
-	set tags+=/Users/lidi/.tags/python/3.8/tags
-endfunction
-function RUBLIB()
-	set tags=tags
-	set tags+=./tags
-	set tags+=/Users/lidi/.tags/ruby/3.0/tags
-endfunction
-function JSLIB()
-	set tags=tags
-	set tags+=./tags
-	set tags+=/Users/lidi/.tags/js/node_modules/tags
-endfunction
 
 
 "let g:defx_icons_enable_syntax_highlight = 1
@@ -364,10 +349,11 @@ let g:airline#extensions#tagbar#enabled = 1
 call defx#custom#option('_', {
   \ 'columns': 'icons:indent:filename:size',
   \ 'winwidth': 30,
-  \ 'split': 'vertical',
   \ 'direction': 'botright',
+  \ 'split': 'vertical',
   \ 'show_ignored_files': 0,
   \ 'resume': 1,
+	\ 'toggle': 1,
   \ })
 
 
@@ -384,8 +370,9 @@ inoreabbrev <expr> <bar><bar>
 inoreabbrev <expr> __
           \<SID>isAtStartOfLine('__') ?
           \'<c-o>:silent! TableModeDisable<cr>' : '__'
-autocmd FileType defx call s:defx_my_settings()
+"autocmd FileType defx call s:defx_my_settings()
 
+autocmd FileType defx call s:defx_my_settings() 
 function! s:defx_my_settings() abort
   "IndentLinesDisable
   setl nospell
@@ -530,6 +517,40 @@ endfunction
         endif
 endfunc
 
+autocmd FileType * call Ctags()
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
+
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+
+function Ctags()
+	let ext = expand("%:e")
+	set tags=tags
+	set tags+=./tags
+	if ext ==# "py"
+		set tags+=/Users/lidi/.tags/python/3.8/tags
+	elseif ext ==# "rb"
+		set tags+=/Users/lidi/.tags/ruby/3.0/tags
+	elseif ext ==# "js"
+		set tags+=/Users/lidi/.tags/js/node_modules/tags
+	elseif ext ==# "rs"
+		set tags+=/Users/lidi/.tags/rust/tags
+	endif
+endfunction
+function PYTHONLIB()
+	set tags=tags
+	set tags+=./tags
+	set tags+=/Users/lidi/.tags/python/3.8/tags
+endfunction
+function RUBLIB()
+	set tags=tags
+	set tags+=./tags
+	set tags+=/Users/lidi/.tags/ruby/3.0/tags
+endfunction
+function JSLIB()
+	set tags=tags
+	set tags+=./tags
+	set tags+=/Users/lidi/.tags/js/node_modules/tags
+endfunction
 func! QuickRun()
         exec "w"
         let ext = expand("%:e")
@@ -559,10 +580,10 @@ func! QuickRun()
             exec "so %"
         elseif ext ==# "html"
 
-          exec "open -a 'Firefox' %"
-          ""  exec "!google-chrome-stable %"
+          "exec "!open -a 'firefox' %"
+          exec "!open -a 'Google Chrome' %"
         elseif ext ==# "rs"
-            call CargoRun()
+            call CargoRun("")
         elseif ext ==# "rb"
             exec "!ruby %"
         else
@@ -571,13 +592,19 @@ func! QuickRun()
         echo 'done'
 endf
 
-func! CargoRun()
+nnoremap <leader>rt :call CargoRun("test")
+func! CargoRun(env)
 	let cargo_run_path = fnamemodify(resolve(expand('%:p')), ':h')
 	while cargo_run_path != "/"
 		if filereadable(cargo_run_path . "/Cargo.toml")
 		    echo cargo_run_path
 		    exec "cd " . cargo_run_path
-		    exec "!cargo run"
+			if a:env ==# "test"
+				exec "!cargo test"
+
+			else
+				exec "!cargo run"
+			endif
 		    exec "cd -"
 		    return
 		endif
@@ -585,6 +612,39 @@ func! CargoRun()
 	endwhile
 	echo "Cargo.toml not found !"
 endf
-
+let g:rust_use_custom_ctags_defs = 1
+let g:tagbar_type_rust = {
+  \ 'ctagsbin' : '/usr/local/bin/ctags',
+  \ 'ctagstype' : 'rust',
+  \ 'kinds' : [
+      \ 'n:modules',
+      \ 's:structures:1',
+      \ 'i:interfaces',
+      \ 'c:implementations',
+      \ 'f:functions:1',
+      \ 'g:enumerations:1',
+      \ 't:type aliases:1:0',
+      \ 'v:constants:1:0',
+      \ 'M:macros:1',
+      \ 'm:fields:1:0',
+      \ 'e:enum variants:1:0',
+      \ 'P:methods:1',
+  \ ],
+  \ 'sro': '::',
+  \ 'kind2scope' : {
+      \ 'n': 'module',
+      \ 's': 'struct',
+      \ 'i': 'interface',
+      \ 'c': 'implementation',
+      \ 'f': 'function',
+      \ 'g': 'enum',
+      \ 't': 'typedef',
+      \ 'v': 'variable',
+      \ 'M': 'macro',
+      \ 'm': 'field',
+      \ 'e': 'enumerator',
+      \ 'P': 'method',
+  \ },
+\ }
 hi Visual ctermfg=180 ctermbg=59 guifg=#E5C07B guibg=#5C6370
 
