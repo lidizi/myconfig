@@ -1,4 +1,4 @@
- set  nu 
+ let  nu 
  "| 当文件被其他编辑器修改时，自动加载 |
 set autowrite
 set autoread ""设置按照syntax高亮进行折叠 
@@ -213,7 +213,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'luochen1990/rainbow'
 Plug 'joshdick/onedark.vim'
-
+Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 Plug 'neoclide/coc-git'
 Plug 'morhetz/gruvbox'
 Plug 'mzlogin/vim-markdown-toc'
@@ -517,7 +517,7 @@ endfunction
         endif
 endfunc
 
-autocmd FileType * call Ctags()
+autocmd FileType * :call Ctags()
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
 
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
@@ -592,7 +592,7 @@ func! QuickRun()
         echo 'done'
 endf
 
-nnoremap <leader>rt :call CargoRun("test")
+nnoremap <leader>rt :call CargoRun("test")<CR>
 func! CargoRun(env)
 	let cargo_run_path = fnamemodify(resolve(expand('%:p')), ':h')
 	while cargo_run_path != "/"
@@ -601,7 +601,6 @@ func! CargoRun(env)
 		    exec "cd " . cargo_run_path
 			if a:env ==# "test"
 				exec "!cargo test"
-
 			else
 				exec "!cargo run"
 			endif
