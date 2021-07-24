@@ -286,39 +286,42 @@ font:
 
 
   # Colors (Dracula)
-
-#  colors:
-#    bright:
-#      black: '282c34'
-#      blue: '61afef'
-#      cyan: '56b6c2'
-#      green: '98c379'
-#      magenta: 'c678dd'
-#      red: 'e06c75'
-#      white: 'dcdfe4'
-#      yellow: 'e5c07b'
-#    cursor:
-#      cursor: 'a3b3cc'
-#      text: 'dcdfe4'
-#    normal:
-#      black: '282c34'
-#      blue: '61afef'
-#      cyan: '56b6c2'
-#      green: '98c379'
-#      magenta: 'c678dd'
-#      red: 'e06c75'
-#      white: 'dcdfe4'
-#      yellow: 'e5c07b'
-#    primary:
-#      background: '282c34'
-#      foreground: 'dcdfe4'
-#    selection:
-#      background: '474e5d'
-#      text: 'dcdfe4'
     
 
+  # Colors (MaterialOcean)
   
 # Colors (Blazer)
+
+
+
+colors:
+  bright:
+    black: '#545454'
+    blue: '#82aaff'
+    cyan: '#89ddff'
+    green: '#c3e88d'
+    magenta: '#c792ea'
+    red: '#ff5370'
+    white: '#ffffff'
+    yellow: '#ffcb6b'
+  cursor:
+    cursor: '#ffffff'
+    text: '#ffffff'
+  normal:
+    black: '#000000'
+    blue: '#82aaff'
+    cyan: '#89ddff'
+    green: '#c3e88d'
+    magenta: '#c792ea'
+    red: '#ff5370'
+    white: '#ffffff'
+    yellow: '#ffcb6b'
+  primary:
+    background: '#212121'
+    foreground: '#eeffff'
+  selection:
+    background: '#eeffff'
+    text: '#545454'
 # # Colors (Broadcast)
 #colors:
 #  bright:
@@ -393,7 +396,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+background_opacity: 0.9
 
 #selection:
   # This string contains all characters that are used as separators for

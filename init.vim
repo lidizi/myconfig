@@ -1,4 +1,4 @@
- let  nu 
+set  nu 
  "| 当文件被其他编辑器修改时，自动加载 |
 set autowrite
 set autoread ""设置按照syntax高亮进行折叠 
@@ -21,7 +21,7 @@ hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 
 
 "highlight Normal ctermfg=black ctermbg=yellow--------------------fzf 搜索---------------------
-"
+
 "
 
 "------------------------------------------fzf---------------------------------------------
@@ -90,6 +90,7 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 
 
+nnoremap <C-l> :nohlsearch<CR>
 
 "" 重新映射 leader 键
 let g:mapleader = '\'
@@ -213,12 +214,22 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'luochen1990/rainbow'
 Plug 'joshdick/onedark.vim'
-Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+
+Plug 'kristijanhusak/vim-hybrid-material'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'overcache/NeoSolarized'
+Plug 'mhartington/oceanic-next'
+
+"Plug 'sainnhe/ightline_foobar.vim'
+
 Plug 'neoclide/coc-git'
 Plug 'morhetz/gruvbox'
+Plug 'hzchirs/vim-material'
 Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'dhruvasagar/vim-table-mode'
+
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 " 安装插件
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'godlygeek/tabular'
@@ -254,26 +265,88 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 
 
-"let g:defx_icons_enable_syntax_highlight = 1
-" onedark.vim override: Don't set a background color when running in a terminal;
-if (has("autocmd") && !has("gui_running"))
-  augroup colorset
-    autocmd!
-    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
-  augroup END
+let g:defx_icons_enable_syntax_highlight = 1
+
+
+let g:enable_bold_font = 1
+
+let g:enable_italic_font = 1
+let g:hybrid_transparent_background = 1
+colorscheme hybrid_material
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
-hi Comment cterm=italic
-"取消储存时自动更新目录
-let g:vmt_auto_update_on_save = 0
-let g:onedark_hide_endofbuffer=1
-let g:onedark_terminal_italics=1
-let g:onedark_termcolors=256
-let g:mdip_imgdir = 'img'
-colorscheme onedark
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
+" onedark.vim override: Don't set a background color when running in a terminal;
+"if (has("autocmd") && !has("gui_running"))
+"  augroup colorset
+"    autocmd!
+"    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+"    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+"  augroup END
+"endif
+""
+"hi Comment cterm=italic
+"set background=dark
+""取消储存时自动更新目录
+"let g:vmt_auto_update_on_save = 0
+
+
+
+"colorscheme material
+"
+"set background=dark
+
+
+" Dark
+"set background=dark
+"colorscheme vim-material
+
+" Palenight
+"let g:material_style='palenight'
+"set background=dark
+"colorscheme vim-material
+
+" Oceanic
+"let g:material_style='oceanic'
+"set background=dark
+"colorscheme vim-material
+
+" Light
+"set background=light
+"colorscheme vim-material
+"
+" For Neovim 0.1.3 and 0.1.4 - https://github.com/neovim/neovim/pull/2198
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
+" For Neovim > 0.1.5 and Vim > patch 7.4.1799 - https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162
+" Based on Vim patch 7.4.1770 (`guicolors` option) - https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd
+" https://github.com/neovim/neovim/wiki/Following-HEAD#20160511
+if (has('termguicolors'))
+  set termguicolors
+endif
+"let g:onedark_hide_endofbuffer=1
+"let g:onedark_terminal_italics=1
+"let g:onedark_termcolors=256
+"let g:mdip_imgdir = 'img'
+"
+""" Theme
+"syntax enable
+"colorscheme onedark
+"colorscheme OceanicNext
 "colorscheme gruvbox
 
+
+"colorscheme NeoSolarized
 "设置快捷键，个人喜欢 Ctrl+p 的方式，比较直观
 autocmd FileType markdown nnoremap <silent> <leader>mp :call mdip#MarkdownClipboardImage()<CR>F%i
 
@@ -647,3 +720,4 @@ let g:tagbar_type_rust = {
 \ }
 hi Visual ctermfg=180 ctermbg=59 guifg=#E5C07B guibg=#5C6370
 
+highlight LineNr guifg=#546e7a

@@ -30,7 +30,6 @@ nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 "查看所有断点
 nnoremap <Leader>ba :action ViewBreakpoints<CR>
 
-
 nnoremap <Leader>rcd :action ChooseDebugConfiguration<CR>
 nnoremap <Leader>rd :action Debug<CR>
 "正常启动工程
@@ -44,11 +43,14 @@ nnoremap <Leader>e :action RecentFiles<CR>
 nnoremap <Leader>rc :action RecentChanges<CR>
 
 
+nnoremap <C-l> :nohlsearch <CR>
 "跳转到文件
 nnoremap <Leader>ff :action GotoFile<CR>
 
 "跳转到实现类
 nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gm :action ImplementMethods<CR>
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
 
 "打开命令管理器
 nnoremap <Leader>tt :action ActivateTerminalToolWindow<CR>
@@ -71,3 +73,9 @@ nnoremap <Leader>sr :action ReplaceInPath<CR>
 nnoremap <Leader>ss :action FindInPath<CR>
 " 
 nnoremap <Leader>/ :action Find<CR>
+nnoremap <Leader>mr :action Maven.Reimport<CR>
+
+
+"nnoremap <Leader>mc :!mvn clean compile -Dmaven.test.skip=true<CR>
+"nnoremap <Leader>mi :!mvn clean install -Dmaven.test.skip=true<CR>
+"nnoremap <Leader>mp :!mvn clean package -Dmaven.test.skip=true<CR>
