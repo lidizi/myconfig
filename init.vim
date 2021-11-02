@@ -1,4 +1,6 @@
-set  nu 
+ 
+"
+set nu
  "| 当文件被其他编辑器修改时，自动加载 |
 set autowrite
 set autoread ""设置按照syntax高亮进行折叠 
@@ -11,18 +13,48 @@ set softtabstop=4
 set shiftwidth=4 
 set noexpandtab 
 set cursorline 
+set termguicolors
 set so=10 
 syntax on
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 
 
 
+let mapleader = "\<Space>"
+nnoremap <c-n> :bn <CR>
+nnoremap <c-p> :bp <CR>
+
+"inoremap <expr><C-k> pumvisible() ? "\<C-p>" : ""
+"inoremap <expr><C-j> pumvisible() ? "\<C-n>" : ""
+"inoremap <expr><C-k> "\<C-p>" 
+"inoremap <expr><C-j> "\<C-n>" 
+
+nnoremap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <leader>ws :split <CR>
+nnoremap <leader>wv :vsplit <CR>
+"nnoremap <leader>l :nohlsearch <CR>
 
 
+autocmd BufRead *.erb set filetype=html
+"autocmd BufRead *.scss set filetype=css
+"inoremap <C-k> <C-p>
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 "highlight Normal ctermfg=black ctermbg=yellow--------------------fzf 搜索---------------------
 
-"
+
+
 
 "------------------------------------------fzf---------------------------------------------
 
@@ -90,24 +122,21 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 
 
-nnoremap <C-l> :nohlsearch<CR>
+nnoremap <Leader>cl :nohlsearch<CR>
 
 "" 重新映射 leader 键
-let g:mapleader = '\'
 "nnoremap  <Leader>ff :Files<CR>
-nnoremap  <Leader>ll :Lines<CR>
-"nnoremap  <Leader>e :Buffers<CR>
-nnoremap <Leader>ss :RG <CR>
-
-nnoremap <Leader>cc :Commands <CR>
-nnoremap <Leader>hh :History <CR>
+"nnoremap  <Leader>sl :Lines<CR>
+""nnoremap  <Leader>e :Buffers<CR>
+""nnoremap <Leader>ss :LeaderfLineAll <CR>
+"
+"nnoremap <Leader>cc :Commands <CR>
+"nnoremap <Leader>hh :History <CR>
 nnoremap <leader>d :Defx<CR>
 "inoremap jj <Esc>`^
-inoremap <silent>jj <Esc>`^
-inoremap <silent>jw <Esc> :w <CR>
-inoremap <leader>w <Esc>`^ :w <CR>
-nnoremap <silent><leader>w <Esc>:w<CR>
-vnoremap <silent><Leader>w <Esc>:write<CR>
+inoremap <silent>jj <Esc>
+inoremap <C-s> <ESC> :w <CR>
+nnoremap <C-s> :w <CR>
 nnoremap <leader>rr :call QuickRun()<CR>
 
 "-------------------------------git ----------------------------------------
@@ -116,6 +145,17 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gf :GFiles<CR>
 nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>gc :Gcommit<CR>
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+
+ "Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 
 
@@ -168,20 +208,23 @@ let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu S
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
 let g:Lf_ShortcutF = "<leader>ff"
-noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
-noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
-noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
-noremap <leader>fn :<C-U><C-R>=printf("Leaderf function %s", "")<CR><CR>
-noremap <leader>fan :LeaderfFunctionAll<CR>
-nnoremap <Leader>fch :LeaderfHistoryCmd <CR>
-nnoremap <Leader>fc :LeaderfCommand <CR>
+noremap <C-e> :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+"noremap <Leader>c :<C-U><C-R>=prinf("Leaderf mru %s", "")<CR><CR>
+"noremap <leader>st :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap /  :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+"noremap <leader>f :<C-U><C-R>=printf("Leaderf function %s", "")<CR><CR>
+"noremap <leader>gf :LeaderfFunctionAll<CR>
+nnoremap <leader>ch :LeaderfHistoryCmd <CR>
+nnoremap <Leader>cc :LeaderfCommand <CR>
+"nnoremap <C-s> :LeaderfLineAll <CR>
 
-noremap <leader>e :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
-noremap <leader>fr :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-noremap <leader>fs :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
-noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
-noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
+
+
+
+"noremap <leader>fr :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+"noremap <C-s> :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
+"noremap <C-s> :<C-U><C-R>=printf("Leaderf rg -e %s ", expand("<cword>"))<CR>
+"noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 "noremap <leader>fgr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
 "noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
 "noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
@@ -191,7 +234,7 @@ noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 "xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
 "noremap go :<C-U>Leaderf! rg --recall<CR>
 
-call plug#begin()
+call plug#begin('/Users/lidi/.config/nvim/plugged')
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -216,7 +259,7 @@ Plug 'luochen1990/rainbow'
 Plug 'joshdick/onedark.vim'
 
 Plug 'kristijanhusak/vim-hybrid-material'
-"Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'overcache/NeoSolarized'
 Plug 'mhartington/oceanic-next'
 
@@ -227,7 +270,10 @@ Plug 'morhetz/gruvbox'
 Plug 'hzchirs/vim-material'
 Plug 'mzlogin/vim-markdown-toc'
 
+Plug 'KabbAmine/yowish.vim'
+
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'glepnir/oceanic-material'
 
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 " 安装插件
@@ -238,8 +284,20 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ferrine/md-img-paste.vim'
 Plug 'kristijanhusak/defx-icons'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+
+
+"Plug 'jvanja/vim-bootstrap4-snippets'
+
+
+Plug 'liuchengxu/space-vim-theme'
+
+Plug 'JulesWang/css.vim'
+Plug 'cakebaker/scss-syntax.vim'
 call plug#end()
 
+
+
+let g:oceanic_material_background = 'ocean'
 " should use `Leaderf gtags --update` first
 let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
@@ -272,18 +330,57 @@ let g:enable_bold_font = 1
 
 let g:enable_italic_font = 1
 let g:hybrid_transparent_background = 1
-colorscheme hybrid_material
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
 endif
+let g:airline_theme='oceanicnext'
+
+syntax on
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+
+" Theme
+syntax enable
+"colorscheme OceanicNext
+"colorscheme space_vim_theme
+
+"set background=light
+"colorscheme yowish
+
+"colorscheme material
+" For Neovim 0.1.3 and 0.1.4 - https://github.com/neovim/neovim/pull/2198
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
+" For Neovim > 0.1.5 and Vim > patch 7.4.1799 - https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162
+" Based on Vim patch 7.4.1770 (`guicolors` option) - https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd
+" https://github.com/neovim/neovim/wiki/Following-HEAD#20160511
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+let g:material_terminal_italics = 1
+
+let g:material_theme_style = 'ocean'
+"colorscheme hybrid_material
+"if (has("nvim"))
+"  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+"  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"endif
 
 "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
 "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
 " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-if (has("termguicolors"))
-  set termguicolors
-endif
+"if (has("termguicolors"))
+"  set termguicolors
+"endif
 " onedark.vim override: Don't set a background color when running in a terminal;
 "if (has("autocmd") && !has("gui_running"))
 "  augroup colorset
@@ -302,7 +399,6 @@ endif
 
 "colorscheme material
 "
-"set background=dark
 
 
 " Dark
@@ -324,16 +420,10 @@ endif
 "colorscheme vim-material
 "
 " For Neovim 0.1.3 and 0.1.4 - https://github.com/neovim/neovim/pull/2198
-if (has('nvim'))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-endif
 
 " For Neovim > 0.1.5 and Vim > patch 7.4.1799 - https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162
 " Based on Vim patch 7.4.1770 (`guicolors` option) - https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd
 " https://github.com/neovim/neovim/wiki/Following-HEAD#20160511
-if (has('termguicolors'))
-  set termguicolors
-endif
 "let g:onedark_hide_endofbuffer=1
 "let g:onedark_terminal_italics=1
 "let g:onedark_termcolors=256
@@ -341,7 +431,7 @@ endif
 "
 """ Theme
 "syntax enable
-"colorscheme onedark
+colorscheme onedark
 "colorscheme OceanicNext
 "colorscheme gruvbox
 
@@ -373,11 +463,6 @@ nmap <leader>+ <Plug>AirlineSelectNextTab
 " 设置切换tab的快捷键 <\> + <q> 退出当前的 tab
 nmap <leader>q :bp<cr>:bd #<cr>
 
-let g:floaterm_wintype = "split"
-nmap <leader>ts :FloatermPrev<CR>
-nmap <leader>tn :FloatermNew<CR>
-nmap <leader>tn :FloatermToggle<CR>
-nmap <leader>th :FloatermHide<CR>
 " 修改了一些个人不喜欢的字符
   " 设置defx树的一些格式
   
@@ -480,105 +565,6 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select')
   nnoremap <silent><buffer><expr> <C-R> defx#do_action('redraw')
 endfunction
-"function! s:defx_my_settings() abort
-"  " Define mappings
-"  nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
-"  nnoremap <silent><buffer><expr> c
-"  \ defx#do_action('copy')
-"  nnoremap <silent><buffer><expr> m
-"  \ defx#do_action('move')
-"  nnoremap <silent><buffer><expr> p
-"  \ defx#do_action('paste')
-"  nnoremap <silent><buffer><expr> l
-"  \ defx#do_action('open')
-"  nnoremap <silent><buffer><expr> E
-"  \ defx#do_action('open', 'vsplit')
-"  nnoremap <silent><buffer><expr> P
-"  \ defx#do_action('open', 'pedit')
-"  nnoremap <silent><buffer><expr> o
-"  \ defx#do_action('open_or_close_tree')
-"  nnoremap <silent><buffer><expr> K
-"  \ defx#do_action('new_directory')
-"  nnoremap <silent><buffer><expr> N
-"  \ defx#do_action('new_file')
-"  nnoremap <silent><buffer><expr> M
-"  \ defx#do_action('new_multiple_files')
-"  nnoremap <silent><buffer><expr> C
-"  \ defx#do_action('toggle_columns',
-"  \                'mark:indent:icon:filename:type:size:time')
-"  nnoremap <silent><buffer><expr> S
-"  \ defx#do_action('toggle_sort', 'time')
-"  nnoremap <silent><buffer><expr> d
-"  \ defx#do_action('remove')
-"  nnoremap <silent><buffer><expr> r
-"  \ defx#do_action('rename')
-"  nnoremap <silent><buffer><expr> !
-"  \ defx#do_action('execute_command')
-"  nnoremap <silent><buffer><expr> x
-"  \ defx#do_action('execute_system')
-"  nnoremap <silent><buffer><expr> yy
-"  \ defx#do_action('yank_path')
-"  nnoremap <silent><buffer><expr> .
-"  \ defx#do_action('toggle_ignored_files')
-"  nnoremap <silent><buffer><expr> ;
-"  \ defx#do_action('repeat')
-"  nnoremap <silent><buffer><expr> h
-"  \ defx#do_action('cd', ['..'])
-"  nnoremap <silent><buffer><expr> ~
-"  \ defx#do_action('cd')
-"  nnoremap <silent><buffer><expr> q
-"  \ defx#do_action('quit')
-"  nnoremap <silent><buffer><expr> <Space>
-"  \ defx#do_action('toggle_select') . 'j'
-"  nnoremap <silent><buffer><expr> *
-"  \ defx#do_action('toggle_select_all')
-"  nnoremap <silent><buffer><expr> j
-"  \ line('.') == line('$') ? 'gg' : 'j'
-"  nnoremap <silent><buffer><expr> k
-"  \ line('.') == 1 ? 'G' : 'k'
-"  nnoremap <silent><buffer><expr> <C-l>
-"  \ defx#do_action('redraw')
-"  nnoremap <silent><buffer><expr> <C-g>
-"  \ defx#do_action('print')
-"  nnoremap <silent><buffer><expr> cd
-"  \ defx#do_action('change_vim_cwd')
-"endfunction
-"colorscheme gotham
-"colorscheme gotham256
-"function! s:defx_my_settings() abort
-"  "IndentLinesDisable
-"  setl nospell
-"  setl signcolumn=no
-"  setl nonumber
-"  nnoremap <silent><buffer><expr> <CR>
-"  \ defx#is_directory() ?
-"  \ defx#do_action('open_or_close_tree') :
-"  \ defx#do_action('drop',)
-"  nmap <silent><buffer><expr> <2-LeftMouse>
-"  \ defx#is_directory() ?
-"  \ defx#do_action('open_or_close_tree') :
-"  \ defx#do_action('drop',)
-"  nnoremap <silent><buffer><expr> s defx#do_action('drop', 'split')
-"  nnoremap <silent><buffer><expr> v defx#do_action('drop', 'vsplit')
-"  nnoremap <silent><buffer><expr> t defx#do_action('drop', 'tabe')
-"  "nnoremap <silent><buffer><expr> o defx#do_action('open_tree')
-"nnoremap <sient><buffer><expr> o
-"                \ defx#is_directory() ? 
-"                \ defx#do_action('open_or_close_tree') : 
-"                \ defx#do_action('multi', ['drop'])
-"  nnoremap <silent><buffer><expr> O defx#do_action('open_tree_recursive')
-"  nnoremap <silent><buffer><expr> E defx#do_action('open')
-"  nnoremap <silent><buffer><expr> C defx#do_action('copy')
-"  nnoremap <silent><buffer><expr> P defx#do_action('paste')
-"  nnoremap <silent><buffer><expr> R defx#do_action('rename')
-"  nnoremap <silent><buffer><expr> D defx#do_action('remove')
-"  "nnoremap <silent><buffer><expr> D defx#do_action('remove_trash')
-"  nnoremap <silent><buffer><expr> A defx#do_action('new_multiple_files')
-"  nnoremap <silent><buffer><expr> U defx#do_action('cd', ['..'])
-"  nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
-"  nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select')
-"  nnoremap <silent><buffer><expr> <C-R> defx#do_action('redraw')
-"endfunction
 
 
  func! ArgFunc() abort
@@ -721,3 +707,15 @@ let g:tagbar_type_rust = {
 hi Visual ctermfg=180 ctermbg=59 guifg=#E5C07B guibg=#5C6370
 
 highlight LineNr guifg=#546e7a
+"使用 <Cl> 触发代码段展开。
+"imap  <Cl>  <Plug> (coc - snippets - expand )
+
+"使用 <Cj> 为片段的可视占位符选择文
+"vmap  <Cj>  <Plug> (coc - snippets - select)
+
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)

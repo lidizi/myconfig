@@ -15,6 +15,8 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
+env:
+  TERM: xterm-256color
 #env:
   # TERM variable
   #
@@ -31,8 +33,8 @@ window:
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
   dimensions:
-    columns: 140
-    lines: 50
+    columns: 110
+    lines: 40
 
   # Window position (changes require restart)
   #
@@ -164,7 +166,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 14.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -292,67 +294,37 @@ font:
   
 # Colors (Blazer)
 
+    # Colors (BlueDolphin)
 
 
 colors:
   bright:
-    black: '#545454'
-    blue: '#82aaff'
-    cyan: '#89ddff'
-    green: '#c3e88d'
-    magenta: '#c792ea'
-    red: '#ff5370'
-    white: '#ffffff'
-    yellow: '#ffcb6b'
+    black: '#554444'
+    blue: '#87ceeb'
+    cyan: '#b0c4de'
+    green: '#88aa22'
+    magenta: '#996600'
+    red: '#cc5533'
+    white: '#ddccbb'
+    yellow: '#ffa75d'
   cursor:
-    cursor: '#ffffff'
-    text: '#ffffff'
+    cursor: '#e2bbef'
+    text: '#000000'
   normal:
-    black: '#000000'
-    blue: '#82aaff'
-    cyan: '#89ddff'
-    green: '#c3e88d'
-    magenta: '#c792ea'
-    red: '#ff5370'
-    white: '#ffffff'
-    yellow: '#ffcb6b'
+    black: '#3d352a'
+    blue: '#6495ed'
+    cyan: '#b0c4de'
+    green: '#86af80'
+    magenta: '#deb887'
+    red: '#cd5c5c'
+    white: '#bbaa99'
+    yellow: '#e8ae5b'
   primary:
-    background: '#212121'
-    foreground: '#eeffff'
+    background: '#1c1c1c'
+    foreground: '#ddeedd'
   selection:
-    background: '#eeffff'
-    text: '#545454'
-# # Colors (Broadcast)
-#colors:
-#  bright:
-#    black: '#323232'
-#    blue: '#9fcef0'
-#    cyan: '#a0cef0'
-#    green: '#83d182'
-#    magenta: '#ffffff'
-#    red: '#ff7b6b'
-#    white: '#ffffff'
-#    yellow: '#ffff7c'
-#  cursor:
-#    cursor: '#ffffff'
-#    text: '#e6e1dc'
-#  normal:
-#    black: '#000000'
-#    blue: '#6d9cbe'
-#    cyan: '#6e9cbe'
-#    green: '#519f50'
-#    magenta: '#d0d0ff'
-#    red: '#da4939'
-#    white: '#ffffff'
-#    yellow: '#ffd24a'
-#  primary:
-#    background: '#2b2b2b'
-#    foreground: '#e6e1dc'
-#  selection:
-#    background: '#5a647e'
-#    text: '#e6e1dc'
-# Bell
-#
+    background: '#4d4d4d'
+    text: '#ffffff'
 # The bell is rung every time the BEL control character is received.
 #bell:
   # Visual Bell Animation
@@ -396,7 +368,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9
+background_opacity: 1.0
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -511,6 +483,12 @@ shell:
 # 解决中文输入退格删除字符
 key_bindings:
     - { key: Back, action: ReceiveChar}
+    - { key: F, mods: Command ,chars: ":LeaderfFile \n"}
+    - { key: S, mods: Command ,chars: ":LeaderfLineAll\n"}
+    - { key: R, mods: Command ,chars: ":call QuickRun()\n"}
+    - { key: L, mods: Command ,chars: ":nohlsearch\n"}
+    - { key: D, mods: Command ,chars: ":Defx\n"}
+    - { key: E, mods: Command ,chars: ":Leaderf buffer\n"}
 # Regex hints
 #
 # Terminal hints can be used to find text in the visible part of the terminal

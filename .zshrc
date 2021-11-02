@@ -44,7 +44,8 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 #
 HOMEBIN=/Users/lidi/bin 
 MAVEN_HOME=/Users/lidi/software/apache-maven
-PATH=$PATH:$MAVEN_HOME/bin:$GOROOT/bin:$GOPATH/bin:$HOMEBIN 	
+SCALA_HOME=/usr/local/share/scala
+PATH=$PATH:$MAVEN_HOME/bin:$GOROOT/bin:$GOPATH/bin:$HOMEBIN:$SCALA_HOME/bin
 export MAVEN_HOME
 export PATH
 # Path to your oh-my-zsh installation.
@@ -57,8 +58,13 @@ export ZSH="/Users/lidi/.oh-my-zsh"
 #ZSH_THEME="frisk"
 #ZSH_THEME="random"
 #ZSH_THEME="agnoster"
+#ZSH_THEME="edvardm"
+#ZSH_THEME="half-life"
+ZSH_THEME="skaro"
 
-ZSH_THEME=powerlevel10k/powerlevel10k
+export HOMEBREW_BOTTLE_DOMAIN=''
+
+#ZSH_THEME=powerlevel10k/powerlevel10k
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=##5C6370'
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#E5C07B'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999797'
@@ -163,18 +169,22 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottl
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export EDITOR="vim"
 
 export RUST_BACKTRACE=1
 RUST_PATH="$HOME/.cargo/bin:$PATH"
 FIRE_FOX_PATH="/Applications/Firefox.app/Contents/MacOS"
-export PATH="/usr/local/opt/openssl@1.1/bin:$JAVA_HOME/bin:$RUST_PATH:$GRADLE_HOME/bin:$FIRE_FOX_PATH:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$JAVA_HOME/bin:$RUST_PATH:$GRADLE_HOME/bin:$FIRE_FOX_PATH:$PATH:/usr/local/bin"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/library/
 #-----------------man ------------------------------
 #export BAT_THEME='Coldark-Dark'
-export BAT_THEME='OneDark'
+#export BAT_THEME='OneDark'
+export BAT_THEME='base16-256'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_FUZZY=true
 #-----------------man ------------------------------
 #export LANG=zh_CN.UTF-8  
 #export PYTHON_HOST_PROG='/usr/local/bin/python2'
@@ -185,10 +195,10 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #plugins Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p11k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p11k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+##[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #export PYENV_ROOT="$HOME/git/pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
@@ -244,7 +254,8 @@ alias fvim='vim $(fzf)'
 #alias proxy='export http_proxy=http://127.0.0.1:10887;export https_proxy=http://127.0.0.1:10887;'
 #alias proxy='export http_proxy=http://127.0.0.1:10887;export https_proxy=http://127.0.0.1:10887;'
 
-alias proxy='export http_proxy=http://127.0.0.1:4780;export https_proxy=http://127.0.0.1:4780;'
+#alias proxy='export http_proxy=http://127.0.0.1:4780;export https_proxy=http://127.0.0.1:4780;'
+alias proxy='export http_proxy=http://192.168.1.2:1080;export https_proxy=http://192.168.1.2:1080;'
 #alias proxy='export http_proxy=http://127.0.0.1:8080;export https_proxy=http://127.0.0.1:8080;'
 alias unproxy='unset http_proxy;unset https_proxy;'
 #export GOPROXY='https://127.0.0.1:1087'
@@ -252,6 +263,8 @@ alias sed='gsed'
 alias reboot='~/bin/reboot.sh'
 alias vim="/opt/nvim-osx64/bin/nvim"
 alias pip3='/usr/bin/pip3'
+alias tmux="TERM=screen-256color-bce tmux"
+
 #alias proxy='proxychains4'
 # ----------------------------------------------tmux -----------------------------------------------
 #alias t-snew='tmux new -s'
@@ -327,6 +340,7 @@ fi
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 [ -f /usr/local/etc/profile.d/z.sh ] && . /usr/local/etc/profile.d/z.sh
 
+[ -f ~/bin/hh.sh ] && . ~/bin/hh.sh
 
 VAGRANT_HOME=/Volumes/LDZ/vm/vagrant
 if [[ ! -d "$VAGRANT_HOME" ]];then
@@ -335,4 +349,6 @@ fi
 export VAGRANT_HOME
 
 eval "$(rbenv init -)"
+eval "$(mcfly init zsh)"
+
 #[ -f ~/.bin/init ] && . ~/.bin/init
